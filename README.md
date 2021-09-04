@@ -2,7 +2,7 @@
 
 This is a very simple laptimer for those who enjoy racing in a field with multicopters and wish to know how much fast they are!
 
-The project was actually made by [https://github.com/RCdiy](RCdiy), but since it has been discontinued, it is not compatible with modern transmitters anymore.
+The project was actually made by [RCdiy](https://github.com/RCdiy), but since it has been discontinued, it is not compatible with modern transmitters anymore.
 
 I took some time to make it compatible with the latest firmware of OpenTX 2.3 for the popular transmitter Radiomaster TX16S.
 
