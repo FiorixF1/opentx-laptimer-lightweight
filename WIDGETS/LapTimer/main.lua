@@ -17,7 +17,7 @@ end
 local function create(zone, options)
 	LapTimerZone = { zone = zone, options = options }
 	LapTimer = loadfile(TELE_PATH .. "LapTmr.luac")(false)
-	LapTimer.background()
+	LapTimer.init()
 	return LapTimerZone
 end
 
