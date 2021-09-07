@@ -17,7 +17,7 @@ end
 local function create(zone, options)
 	LapTimerZone = { zone = zone, options = options }
 	LapTimer = loadfile(TELE_PATH .. "LapTmr.luac")(false)
-	LapTimer.bg_func()
+	LapTimer.background()
 	return LapTimerZone
 end
 
@@ -29,13 +29,13 @@ end
 
 -- Called periodically when custom telemetry screen containing widget is visible.
 local function refresh(LapTimerZone)
-	LapTimer.run_func()
+	LapTimer.run()
 	return
 end
 
 -- Called periodically when custom telemetry screen containing widget is not visible
 local function background(LapTimerZone)
-	LapTimer.bg_func()
+	LapTimer.background()
 	return
 end
 
