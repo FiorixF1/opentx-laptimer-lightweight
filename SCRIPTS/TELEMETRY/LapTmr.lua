@@ -165,12 +165,6 @@ local function bg_func()
           local filePathName = SoundFilesPath..tostring(#LapTimeList-1)..".wav"
           playFile(filePathName)
         end
-        -- playNumber(#LapTimeList-1,0)
-        --if (#LapTimeList-1) == 1 then
-          --playFile(SoundFilesPath.."laps.wav")
-        ---else
-          --playFile(SoundFilesPath.."lap.wav")
-        --end
         local LapTimeInt = math.floor((LapTime/1000)+0.5)
         playDuration(LapTimeInt, SpeakLapTimeHours)
       end
@@ -230,4 +224,4 @@ local function run_func(event)
   return 0
 end
 
-return { run=run_func, background=bg_func, init=init_func  }
+return { run=run_func, background=bg_func, init=init_func }
