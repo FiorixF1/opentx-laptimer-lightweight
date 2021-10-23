@@ -83,7 +83,7 @@ local Margin = 10
 local Spacing = 20
 local TextHeader = "LapTimer"
 local TextSize = 0
-local TextHeight = 12 
+local TextHeight = 12
 local Debugging = false
 
 local function getTimeMilliseconds()
@@ -102,7 +102,7 @@ local function getMinutesSecondsHundrethsAsString(milliseconds)
   local seconds = milliseconds/1000
   local minutes = math.floor(seconds/60) -- seconds/60 gives minutes
   seconds = seconds % 60 -- seconds % 60 gives seconds
-  return (string.format("%02d:%05.2f", minutes, seconds))
+  return (string.format("%01d:%05.2f", minutes, seconds))
 end
 
 local function getSwitchPosition(switchID)
@@ -133,8 +133,10 @@ local function init_func()
   -- XXLSIZE, MIDSIZE, SMLSIZE, INVERS, BLINK
   if LCD_W > 128 then
     TextSize = MIDSIZE
+    TextHeight = 12
   else
-    TextSize = 0
+    TextSize = SMLSIZE
+    TextHeight = 6
   end
 end
 
